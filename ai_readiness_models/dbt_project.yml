@@ -9,13 +9,11 @@ version: '1.0.0'
 profile: 'ai_readiness'
 
 # These configurations specify where dbt should look for different types of files.
-# The `model-paths` config, for example, states that models in this project can be
-# found in the "models/" directory. You probably won't need to change these!
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
+model-paths: ["models"]       # SQL transformations
+analysis-paths: ["analyses"]  #
+test-paths: ["tests"]         # Data quality checks
+seed-paths: ["seeds"]         # CSV files loaded into the warehouse
+macro-paths: ["macros"]       # Reusable SQL logic
 snapshot-paths: ["snapshots"]
 
 clean-targets:         # directories to be removed by `dbt clean`
@@ -25,3 +23,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
+# Configuring models
+models:
+  ai_readiness:
+    +materialized: view
+
+# Configuring seeds
+seeds:
+  ai_readiness:
+    +quote_columns: false
