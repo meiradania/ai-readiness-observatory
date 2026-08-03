@@ -3,7 +3,7 @@
 
   "image": "mcr.microsoft.com/devcontainers/python:3.12",
 
-  "postCreateCommand": "pip install -r requirements.txt",
+  "postCreateCommand": "pip install -r requirements.txt && mkdir -p ~/.dbt && cp dbt/profiles/profiles.yml ~/.dbt/profiles.yml",
 
   "customizations": {
     "vscode": {

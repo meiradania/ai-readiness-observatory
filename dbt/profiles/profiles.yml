@@ -1,0 +1,6 @@
+ai_readiness:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/ai_readiness.duckdb
