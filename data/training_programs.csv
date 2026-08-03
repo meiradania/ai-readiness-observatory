@@ -1,0 +1,6 @@
+program_id,skill,participants,completion_rate
+1,AI Literacy,500,0.85
+2,Python,200,0.75
+3,Data Visualization,150,0.80
+4,Automation Tools,300,0.90
+5,Machine Learning,100,0.70

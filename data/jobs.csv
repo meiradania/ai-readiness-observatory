@@ -1,0 +1,9 @@
+job_id,occupation,industry,ai_exposure_score
+1,Data Analyst,Technology,0.72
+2,Software Engineer,Technology,0.65
+3,Accountant,Finance,0.85
+4,Teacher,Education,0.35
+5,Marketing Specialist,Marketing,0.60
+6,Customer Support Specialist,Services,0.80
+7,HR Manager,Human Resources,0.40
+8,Doctor,Healthcare,0.30
