@@ -25,15 +25,16 @@ select
     labour.tertiary_enrollment,
 
     case
+        when ai.ai_readiness_score is null then 'No Data'
+        when ai.ai_readiness_score < 60 then 'Low'
+        when ai.ai_readiness_score >= 60 and ai.ai_readiness_score < 80 then 'Medium'
         when ai.ai_readiness_score >= 80 then 'High'
-        when ai.ai_readiness_score >= 60 then 'Medium'
-        else 'Low'
     end as ai_readiness_category,
 
     current_date as snapshot_date
 
-from ai
+from labour
 
-left join labour
+left join ai
     on ai.country_code_iso3 = labour.country_code_iso3
     and ai.year = labour.year
