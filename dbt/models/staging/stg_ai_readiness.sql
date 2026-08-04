@@ -45,6 +45,7 @@ countries as (
 final as (
 
     select
+        ai.year,
         ai.ranking,
         lower(ai.country_name) as country_name,
         countries.country_code_iso3,
