@@ -2,7 +2,7 @@ with ai_2024 as (
 
     select
         cast(ranking as integer) as ranking,
-        trim(lower(country_name)) as country_name,
+        lower(country_name) as country_name,
         cast(year as integer) as year,
         cast(ai_readiness_index as double) as ai_readiness_score
 
@@ -14,7 +14,7 @@ ai_2025 as (
 
     select
         cast(ranking as integer) as ranking,
-        country_name,
+        lower(country_name) as country_name,
         cast(year as integer) as year,
         cast(ai_readiness_index as double) as ai_readiness_score
 
