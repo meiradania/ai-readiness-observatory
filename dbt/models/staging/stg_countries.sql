@@ -8,7 +8,7 @@ with source as (
 renamed as (
 
     select
-        country_name,
+        lower(country_name) as country_name,
         region,
         income_group,
         upper(country_code) as country_code_iso3
