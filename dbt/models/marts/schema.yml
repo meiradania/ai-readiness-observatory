@@ -26,3 +26,18 @@ models:
           - not_null
 
       - name: ai_readiness_score
+        description: "AI readiness score for the country and year."
+
+  - name: time_spine
+    description: "Calendar table used by the dbt Semantic Layer."
+
+    time_spine:
+      standard_granularity_column: date_day
+
+    columns:
+      - name: date_day
+        granularity: day
+
+        tests:
+          - unique
+          - not_null
