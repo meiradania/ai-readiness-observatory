@@ -221,3 +221,4 @@ __marimo__/
 data/*.duckdb
 *.wal
 
+data/ai_readiness.duckdb
