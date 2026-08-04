@@ -1,6 +1,7 @@
 # Data
 
 This folder contains the raw data sources used in the AI Readiness Observatory workshop.
+The sources are: OECD, World Bank, Oxford Insights and the Python library pycountry.
 
 ## Folder structure
 ```text
