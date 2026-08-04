@@ -32,3 +32,8 @@ models:
 seeds:
   ai_readiness:
     +quote_columns: false
+
+semantic-models:
+  time_spine:
+    model: ref('time_spine')
+    primary_column: date_day
