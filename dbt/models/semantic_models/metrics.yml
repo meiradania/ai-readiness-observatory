@@ -1,0 +1,22 @@
+metrics:
+
+  - name: average_ai_readiness_score
+    description: "Average AI readiness score across countries."
+
+    type: simple
+
+    label: "Average AI Readiness Score"
+
+    type_params:
+      measure:
+        name: ai_readiness_score
+
+
+  - name: average_unmployment_rate
+    description: "Average unemployment rate."
+
+    type: simple
+
+    type_params:
+      measure:
+        name: unemployment_rate
