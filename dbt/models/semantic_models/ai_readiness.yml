@@ -1,0 +1,39 @@
+semantic_models:
+
+  - name: country_ai_readiness
+    description: "Semantic model for analysing AI readiness by country."
+
+    model: ref('fct_country_ai_readiness')
+
+    defaults:
+      agg_time_dimension: snapshot_date
+
+    entities:
+      - name: country
+        type: primary
+        expr: iso3
+
+    dimensions:
+
+      - name: snapshot_date
+        type: time
+        type_params:
+          time_granularity: day
+
+      - name: ai_readiness_category
+        type: categorical
+
+    measures:
+
+      - name: ai_readiness_score
+        description: "AI readiness score."
+        agg: average
+
+      - name: unemployment_rate
+        description: "Unmployment rate."
+        agg: average
+
+      - name: countries_count
+        description: "Number of countries analysed."
+        agg: count
+        expr: country_code_iso3
