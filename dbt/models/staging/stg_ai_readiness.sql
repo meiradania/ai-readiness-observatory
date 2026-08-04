@@ -1,4 +1,4 @@
-with ai as (
+with ai_2024 as (
 
     select
         cast(ranking as integer) as ranking,
@@ -6,7 +6,29 @@ with ai as (
         cast(year as integer) as year,
         cast(ai_readiness_index as double) as ai_readiness_score
 
-    from {{ ref('ai_readiness') }}
+    from {{ ref('ai_readiness_2024') }}
+
+),
+
+ai_2025 as (
+
+    select
+        cast(ranking as integer) as ranking,
+        country_name,
+        cast(year as integer) as year,
+        cast(ai_readiness_index as double) as ai_readiness_score
+
+    from {{ ref('ai_readiness_2025') }}
+
+),
+
+ai as (
+
+    select * from ai_2024
+
+    union all
+    
+    select * from ai_2025
 
 ),
 
