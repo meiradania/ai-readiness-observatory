@@ -9,8 +9,19 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "innoverio.vscode-dbt-power-user"
-      ]
+        "innoverio.vscode-dbt-power-user",
+        "chuckjonas.duckdb",
+        "mechatroner.rainbow-csv"
+      ],
+      "settings": {
+        "duckdb.databaseExtensions": [
+          {
+            "path": "data/ai_readiness.duckdb",
+            "name": "AI Readiness Database",
+            "readOnly": true
+          }
+        ]
+      }
     }
   }
 }
