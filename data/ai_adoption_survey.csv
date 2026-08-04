@@ -1,7 +1,0 @@
-company_id,industry,employees,ai_usage_level,training_hours
-101,Technology,500,High,120
-102,Finance,800,High,80
-103,Education,300,Low,20
-104,Retail,600,Medium,50
-105,Healthcare,1000,Medium,70
-106,Services,250,High,90
