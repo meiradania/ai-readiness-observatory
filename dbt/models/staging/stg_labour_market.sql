@@ -8,7 +8,7 @@ with source as (
 renamed as (
 
     select
-        upper(country_code) as country_code_iso3,
+        trim(upper(country_code)) as country_code_iso3,
         cast(year as integer) as year,
         cast(unemployment_rate as double) as unemployment_rate,
         cast(internet_users as integer) as internet_users,

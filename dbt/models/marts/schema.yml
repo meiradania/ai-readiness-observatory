@@ -1,0 +1,28 @@
+version: 2
+
+models:
+
+  - name: dim_country
+    description: "Dimension table containing country attributes."
+
+    columns:
+
+      - name: country_code_iso3
+        description: "ISO 3 country code. Primary key."
+        tests:
+          - unique
+          - not_null
+
+
+  - name: fct_country_ai_readiness
+    description: "Fact table containing AI readiness metrics by country and year."
+
+    columns:
+
+      - name: country_code_iso3
+        description: "Foreign key to dim_country."
+
+        tests:
+          - not_null
+
+      - name: ai_readiness_score

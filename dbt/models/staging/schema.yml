@@ -1,0 +1,54 @@
+version: 2
+
+models:
+
+  - name: stg_countries
+    description: "Cleaned country reference data."
+
+    columns:
+
+      - name: country_code_iso3
+        description: "ISO 3 country code. Unique identifier for countries."
+        tests:
+          - unique
+          - not_null
+
+      - name: country_code_iso2
+        description: "ISO 2 country code."
+
+      - name: country_name
+        description: "Country name in lower case."
+        tests:
+          - not_null
+
+
+  - name: stg_ai_readiness
+    description: "Cleaned AI readiness ranking data."
+
+    columns:
+
+      - name: ranking
+        description: "Global AI readiness ranking position."
+        tests:
+          - not_null
+
+      - name: country_name
+        description: "Country name from source."
+        tests:
+          - not_null
+
+      - name: ai_readiness_score
+        description: "AI readiness total score."
+        tests:
+          - not_null
+
+
+  - name: stg_labour_market
+    description: "Cleaned labour market indicators."
+
+    columns:
+
+      - name: country_code_iso3
+        description: "ISO 3 country code."
+        tests:
+          - not_null

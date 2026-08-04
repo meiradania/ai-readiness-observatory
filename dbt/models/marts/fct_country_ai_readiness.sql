@@ -32,8 +32,8 @@ select
 
     current_date as snapshot_date
 
-from ai
+from labour
 
-left join labour
+left join ai
     on ai.country_code_iso3 = labour.country_code_iso3
     and ai.year = labour.year
